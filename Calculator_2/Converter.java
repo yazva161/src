@@ -6,13 +6,6 @@ public class Converter {
     TreeMap<Character, Integer> romanKey = new TreeMap<>();
     TreeMap<Integer, String> arabianKey = new TreeMap<>();
 
-   /* public Converter(TreeMap<Character, Integer> romanKey) {
-        this.romanKey = romanKey;
-    }
-
-    public Converter(TreeMap<Integer, String> arabianKey) {
-        this.arabianKey = arabianKey;
-    }*/
 
     public Converter(){
         romanKey.put('I', 1);
