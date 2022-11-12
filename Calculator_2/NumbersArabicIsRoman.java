@@ -35,11 +35,10 @@ public class NumbersArabicIsRoman {
         for (int i = 0; i < actions.length; i++) {
             if (expr.contains(actions[i])) {
                 actionIndex = i;
+
                 break;
             }
-            if (actionIndex == -1) {
-                throw new MyException("Строка не является выражением.");
-            }
+
         }
         return actionIndex;
     }
@@ -50,12 +49,12 @@ public class NumbersArabicIsRoman {
         String[] actions = {"+", "-", "/", "*"};
         String[] regexActions = {"\\+", "-", "/", "\\*"};
         String[] data = s.split(regexActions[signExpr(s, actions)]);
+
         if (data.length > 2) {
             throw new MyException("Формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
         }
 
         if (converter.isRoman(data[0]) == converter.isRoman(data[1])) {
-            /*int a, b;*/
 
            setRoman(converter.isRoman(data[0]));
 
