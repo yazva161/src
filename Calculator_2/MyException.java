@@ -5,4 +5,9 @@ public class MyException extends RuntimeException{
       super(s);
   }
 
+  public MyException (int index) {
+      super("Строка не является выражением" + index);
+  }
+
+
 }

@@ -12,6 +12,14 @@ public class Calculator_2 {
         String expression = sc.nextLine();
 
 
-        nar.resultExpr(expression);
+        try {
+            nar.resultExpr(expression);
+
+        } catch (ArrayIndexOutOfBoundsException e){
+            throw new ArrayIndexOutOfBoundsException("Строка не является выражением.");
+        }
+
+
+
     }
 }
