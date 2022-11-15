@@ -32,12 +32,14 @@ public class NumbersArabicIsRoman {
         for (int i = 0; i < actions.length; i++) {
             if (expr.contains(actions[i])) {
                 actionIndex = i;
-
                 break;
             }
-
         }
-        return actionIndex;
+        if (actionIndex == -1) {
+            throw new ArrayIndexOutOfBoundsException("Строка не является исключением.");
+        } else {
+            return actionIndex;
+        }
     }
 
     public String resultExpr(String s) {
@@ -51,9 +53,7 @@ public class NumbersArabicIsRoman {
             throw new MyException("Формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
         }
         if (converter.isRoman(data[0]) == converter.isRoman(data[1])) {
-
            setRoman(converter.isRoman(data[0]));
-
             if (isRoman()) {
                 setA (converter.romanToInt(data[0]));
                 setB (converter.romanToInt(data[1]));
