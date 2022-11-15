@@ -2,7 +2,7 @@ package Calculator_2;
 
 public class NumbersArabicIsRoman {
 
-   /* private String [] expr;*/
+    public String [] s;
     private int a, b;
     private static boolean isRoman;
 
@@ -17,12 +17,9 @@ public class NumbersArabicIsRoman {
     public void setRoman(boolean roman) {
         isRoman = roman;
     }
-
-
     public int getA() {
         return a;
     }
-
     public int getB() {
         return b;
     }
@@ -43,7 +40,7 @@ public class NumbersArabicIsRoman {
         return actionIndex;
     }
 
-    public void resultExpr(String s) {
+    public String resultExpr(String s) {
         Converter converter = new Converter();
 
         String[] actions = {"+", "-", "/", "*"};
@@ -53,7 +50,6 @@ public class NumbersArabicIsRoman {
         if (data.length > 2) {
             throw new MyException("Формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
         }
-
         if (converter.isRoman(data[0]) == converter.isRoman(data[1])) {
 
            setRoman(converter.isRoman(data[0]));
@@ -65,7 +61,6 @@ public class NumbersArabicIsRoman {
                 setA(Integer.parseInt(data[0]));
                 setB(Integer.parseInt(data[1]));
             }
-
             if (getA() > 10 || getB() > 10) {
                 throw new MyException("Введите выражение с операндами от нуля до десяти.");
             }
@@ -96,6 +91,7 @@ public class NumbersArabicIsRoman {
         } else {
             throw new MyException("Тип чисел не совпадает");
         }
+        return s;
     }
 }
 
