@@ -12,13 +12,7 @@ public class Main {
     }
     public static String calc (String input){
         NumbersArabicIsRoman nar = new NumbersArabicIsRoman();
-
-        try {
-            input = nar.resultExpr(input);
-
-        } catch (ArrayIndexOutOfBoundsException e){
-            throw new ArrayIndexOutOfBoundsException("Строка не является выражением.");
-        }
+        input = nar.resultExpr(input);
         return input;
-    }
+    }Ljhf,jnfy
 }
