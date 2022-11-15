@@ -21,6 +21,7 @@ public class Converter {
         arabianKey.put(400, "CD");
         arabianKey.put(100, "C");
         arabianKey.put(90, "XC");
+        arabianKey.put(50, "L");
         arabianKey.put(10, "X");
         arabianKey.put(9, "IX");
         arabianKey.put(5, "V");
